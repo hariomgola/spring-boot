@@ -9,8 +9,8 @@ public class App01GamingBasicJava {
 		// TODO Auto-generated method stub
 		// var game = new MarioGame();
 		var game = new superContra(); // 1: Object Creation
-		var gameRunner = new GameRunner(game); 
-		// 2: Object Creation + Wiring of Dependencies 
+		var gameRunner = new GameRunner(game);
+		// 2: Object Creation + Wiring of Dependencies
 		// Game is Dependency of GameRunner class
 		// We are injecting the dependencies of wired of game for gameRunner classes
 		gameRunner.run();
