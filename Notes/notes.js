@@ -69,8 +69,31 @@
  - Setter-based - Dependencies are set by calling setter menthords on your beans
  - Field - No setter or constructor dependencies is injected using reflection (@Autowired)
 
+# Notes
+ - @Component (..) - An instance of class will be managed by spring framework
+ - @ComponentScan(..) - spring need to component class using component scan
+ - Dependency injection - Identify bean, their dependencies and wire then together(Provide IOC- Inversion of control)
 
 
+# Lazy Initialization of spring Beam
+ - @Lazy is used to load the beam when we are using that it will not be directly loaded into the application load
+
+-------------------------------------------------------------------------------------------------------------------------
+
+# Spring Boot
+ - Spring boot was released in 2016
+
+# Advantage of Using Spring Boot
+ - Quickly 
+     - Spring Initializr
+     - Spring Boot starter project
+     - Spring Boot Auto configuration
+     - Spring Boot DevTools
+
+  - Production-Ready
+     - Logging 
+     - Configuration for different enviourment.
+     - Monitoring (Spring Boot Actuator)
 
 
 
