@@ -1,4 +1,4 @@
-package com.learn_spring_boot.spring_boot;
+package com.learn_spring_boot.spring_boot.constroller;
 
 import java.util.Arrays;
 import java.util.List;
@@ -33,9 +33,10 @@ class Language {
 
 @RestController
 public class LanguageController {
-	
+
 	@RequestMapping("/languages")
 	public List<Language> returnAllCourses() {
-		return Arrays.asList(new Language(1, "Angular", "frontEnd"), new Language(1, "React", "frontEnd"));
+		return Arrays.asList(new Language(1, "Angular", "frontEnd"), new Language(1, "React", "frontEnd"),
+				new Language(3, "Java", "BackEnd"));
 	}
 }

@@ -95,9 +95,22 @@
      - Configuration for different enviourment.
      - Monitoring (Spring Boot Actuator)
 
+# Spring Boot DevTools
+ - To use the spring dev tools we need to put articatId in pom.xml as spring-boot-devtools
+ - It help us to automatically restart the application automatically without loading and re-loading again.
+ - IF any changes is made in pom.xml or dependencies change we need to start the application manulally
 
+# Spring Configuration
+ - Porfiles has been used to configure different enviourments
 
-
+# Application.property 
+ - Configuration using multiple springframework logging level
+        - trace
+        - debug
+        - info
+        - warning
+        - error
+        - off 
 
 
 
