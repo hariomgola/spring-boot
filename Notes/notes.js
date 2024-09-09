@@ -1,4 +1,21 @@
 /**
+# Learning Curve 
+ - Tight Coupling
+ - Loose Coupling
+ - Dependency Injection
+ - Spring Beans
+ - Application Context
+ - IOC container
+ - Auto Wiring
+ - Component Scan
+
+# Learning Iteration
+  - Iteration 1 - Tight coupling plain Java code
+  - Iteration 2 - Loose coupling interface
+  - Iteration 3 - Loose Coupling - Spring framework 1 (Spring bean, framework to manage object and class)
+  - Iteration 4 - Loose Coupling - Spring framework 2 (Spring Annotation, spring create manage and autowired objects)
+
+-------------------------------------------------------------------------------------------------------------------------
 
 # create a spring project
  - https://start.spring.io/
