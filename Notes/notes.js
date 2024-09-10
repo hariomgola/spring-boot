@@ -96,9 +96,15 @@
  - @Lazy is used to load the beam when we are using that it will not be directly loaded into the application load
 
 -------------------------------------------------------------------------------------------------------------------------
+# Maven (Apache Maven)
+ - Apache maven is the project mangment tool that help us to create, build and manage dependencies and test case.
 
 # Spring Boot
  - Spring boot was released in 2016
+
+# Life before Spring Boot
+ - When creating the rest api we need spring framework, Spring mvc framework, JSON binding framerwork etc.
+ - We need to manage frame work and the versioning of these frame work and compatibility for same.
 
 # Advantage of Using Spring Boot
  - Quickly 
@@ -106,20 +112,67 @@
      - Spring Boot starter project
      - Spring Boot Auto configuration
      - Spring Boot DevTools
+     - Actuator
 
   - Production-Ready
      - Logging 
      - Configuration for different enviourment.
      - Monitoring (Spring Boot Actuator)
 
+# Important Annotation
+ - @RestController
+      - Need to be put outside the class where the handler need to be exposed.
+
+ - @RequestMapping
+      - Need to put outside the function along with the handler name.
+      - @RequestMapping("/courses")
+
+ - Want to make the changes to application property
+    source/main/resources - application
+
+# Spring Boot auto configuration
+ - Web Application and Rest API - Spring boot starter project
+ - Unit testing - Spring Boot starter test
+ - Talk to database using JPA - Spring Boot starter data JPA
+ - Talk to database using JDBC - Spring Boot starter JDBC
+ - Secure your web application or REST API - Spring Boot starter security
+
 # Spring Boot DevTools
  - To use the spring dev tools we need to put articatId in pom.xml as spring-boot-devtools
  - It help us to automatically restart the application automatically without loading and re-loading again.
  - IF any changes is made in pom.xml or dependencies change we need to start the application manulally
+      ________________________________________________
+     |                                                |
+     |<dependency>                                    |
+		 |  <groupId>org.springframework.boot</groupId>   |
+		 |  <artifactId>spring-boot-devtools</artifactId> |
+		 |</dependency>                                   |
+     |________________________________________________|
 
-# Spring Configuration
- - Porfiles has been used to configure different enviourments
-
+# Spring Configuration for production ready application
+ - Porfiles 
+      - Profiles has been used to configure different enviourments
+      - If anyting we want to used at different env level such as dev int prod.
+ - Configuration Property
+      - Configuration property allow us to configutre the property and used it in java or spring boot code
+ - Embedded Servers
+      - Install java and run jar serve will be up and running
+      - Right click on project and click on run as > maven build
+      - Goals - Write "clean install"
+      - clean install will run the command mvm clean install
+      - Copy the jar location and goto that and run below command.
+      - Command - java -jar file_Name
+  - Actuator
+      - It help to monitor and manage the application in production.
+      - Provides the number of end-points
+          - Beans - Complete list of spring beans in your app
+          - health - Application health information
+          - metrics - Application metrics
+          - mappings - details around reuqest mappings
+      - To enable all the end points provided by actuator write below command in property file
+          - management.endpoints.web.exposure.include=*
+          -  management.endpoints.web.exposure.include=health,matrics
+      
 # Application.property 
  - Configuration using multiple springframework logging level
         - trace

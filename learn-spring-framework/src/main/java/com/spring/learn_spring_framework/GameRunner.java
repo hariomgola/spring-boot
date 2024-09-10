@@ -1,14 +1,15 @@
 package com.spring.learn_spring_framework;
 
 public class GameRunner {
-	private MarioGame game;
+	private GamingInterface game;
 
 	// constructor
-	public GameRunner(MarioGame game) {
-		this.game = game;	
+	public GameRunner(GamingInterface game) {
+		this.game = game;
 	}
+
 	public void run() {
-		System.out.println(" |> "+game);
+		System.out.println(" |> " + game);
 		game.allControl();
 	}
 }

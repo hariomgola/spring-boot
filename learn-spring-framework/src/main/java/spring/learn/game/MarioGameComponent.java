@@ -1,6 +1,11 @@
-package com.spring.learn_spring_framework;
+package spring.learn.game;
 
-public class MarioGame implements GamingInterface {
+import org.springframework.stereotype.Component;
+
+import com.spring.learn_spring_framework.GamingInterface;
+
+@Component
+public class MarioGameComponent implements GamingInterface {
 	private String Game = "Mario";
 
 	// Functionality

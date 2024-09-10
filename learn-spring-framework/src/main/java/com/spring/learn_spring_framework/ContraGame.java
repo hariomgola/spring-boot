@@ -1,12 +1,7 @@
 package com.spring.learn_spring_framework;
 
-public class ContraGame {
+public class ContraGame implements GamingInterface {
 	private String Game = "Mario";
-
-	// Constructor
-	public ContraGame() {
-		System.out.println("------" + Game + "------");
-	}
 
 	// Functionality
 	public void up() {
@@ -27,6 +22,7 @@ public class ContraGame {
 
 	// All Control Function
 	public void allControl() {
+		System.out.println("  ------" + Game + "------");
 		this.up();
 		this.down();
 		this.left();
