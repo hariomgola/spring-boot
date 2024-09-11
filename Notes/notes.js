@@ -195,6 +195,12 @@
    - To Provide the constant url for h2 in every run provide below command
         jdbc:h2:mem:testdb 
 
+# Spring JDBC
+ - Difference b/w JDBC and Spring JDBC is that we are writting very less code to connect and execute in swl server form java
+ - @Repository - This will talk to the data base need to be put outside the class
+
+
+ - @Entity - IF we want to make the java class same as sql column and rows we need to create this handler
 
 
 
