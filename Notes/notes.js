@@ -144,9 +144,9 @@
       ________________________________________________
      |                                                |
      |<dependency>                                    |
-		 |  <groupId>org.springframework.boot</groupId>   |
-		 |  <artifactId>spring-boot-devtools</artifactId> |
-		 |</dependency>                                   |
+     |  <groupId>org.springframework.boot</groupId>   |
+	|  <artifactId>spring-boot-devtools</artifactId> |
+	|</dependency>                                   |
      |________________________________________________|
 
 # Spring Configuration for production ready application
@@ -182,7 +182,18 @@
         - error
         - off 
 
+# Spring Hibernate and JPA
+ - Dependencies
+    - Spring Web
+    - Spring Data JDBC
+    - Spring Data JPA
+    - H2 Database
 
+ - Notes 
+   - To Enable the h2 console write the below mentioned command in application properties
+        spring.h2.console.enable=true
+   - To Provide the constant url for h2 in every run provide below command
+        jdbc:h2:mem:testdb 
 
 
 
