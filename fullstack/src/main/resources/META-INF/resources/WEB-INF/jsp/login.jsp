@@ -1,13 +1,17 @@
-<html>
-<head>
-<title>Login Page</title>
-</head>
-<body>
-	<h4>Welcome to the Login Page</h4>
+<%@ include file="common/header.jsp"%>
+
+<div class="container">
+	<h1>Welcome to the Login Page</h1>
 	<pre>${loginError}</pre>
 	<form method="post">
-		Name:<input type="text" name="name"> Password:<input
-			type="password" name="password"> <input type="Submit">
+		<div data-mdb-input-init class="form-outline mb-4">
+			Username: <input type="text" name="name" class="form-control">
+		</div>
+		<div>
+			Password:<input type="password" name="password" class="form-control">
+		</div>
+		<br> <input class="btn btn-primary" type="Submit" value="Login">
 	</form>
-</body>
-</html>
+</div>
+
+<%@ include file="common/footer.jsp"%>

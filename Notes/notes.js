@@ -265,7 +265,15 @@
        4 - Execute the view
     C - Return HTTP Response  
 
+# Difference b/w Request vs Model vs Session
+ - Request
+    - When the response is send back, The request attribute will be removed from memory.
+ - Model
+ - Session
+    - Details Stored across multiple request
+    - @SessionAttributes("name") need to be putted when we need to pass the value to the entire session
 
+ - Spring form tag libraries - https://docs.spring.io/spring-framework/docs/3.2.x/spring-framework-reference/html/view.html
 
 
 

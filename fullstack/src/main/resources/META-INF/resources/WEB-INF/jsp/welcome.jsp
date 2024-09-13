@@ -1,8 +1,13 @@
-<html>
-<head>
-<title>Login Page</title>
-</head>
-<body>
-	<h4>Welcome ${name} to the Spring Boot Notes page</h4>
-</body>
-</html>
+<%@ include file="common/header.jsp"%>
+<%@ include file="common/navigation.jsp"%>
+
+
+<div class="container">
+	<h4>Welcome ${name}</h4>
+	<hr>
+	<div>
+		<a href="todos">Move to Todos</a>
+	</div>
+</div>
+
+<%@ include file="common/footer.jsp"%>
