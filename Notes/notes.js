@@ -203,11 +203,67 @@
  - @Entity - IF we want to make the java class same as sql column and rows we need to create this handler
 
 
-
-
+-------------------------------------------------------------------------------------------------------------------------
 # Build Web Application (Speing Boot,Spring framework and Hibernate)
+ - @Controller 
+    - We are telling spring that this is the controller class with bean so we have to add the annotation
+ - RequestMapping("course")
+    - Need to add so that we can add the end point for same
+ - ResponseBody
+    - If we are passing directl string to ui we can termed that as a string body response
+ - JSP - Java Server Pages
+    - To return the html from the route
+    - All JSP Need to be created in the specific folder
+       src/main/resources/META-INF/resources/WEB-INF/jsp/jspHtmlPage.jsp
+    - When Using the JSP Dependency need to be added
+ - @Model
+    - When we need to pass anything from controller to jsp
 
+# Logging
+  - To Enable Logging need to provide the following commands
+      logging.level.some.path=debug
+      logging.level.some.other.path=error
+      logging.file.name=logfile.log
+  - loging function and class
+      private Logger logger = LoggerFactory.getLogger(this.getClass());
+      logger.info("postContruct");
+      logger.info("Request params is {} <|", name); // Logger functionality to print at info level
+      private Logger logger = LoggerFactory.getLogger(getClass());
 
+# Architecture
+ - Model 1 Architecture
+    - Browser > JPA > Model 
+    - This is Complex att code logic is in view only(View, Flow, Query).
+    - Some Disadvantage are Complex, Zero separation of concerns, Difficult to maintain.
+
+ - Model 2 Architecture
+    - Browser > Servlet > View > Model
+                        > Model
+    - Model : Data to generate the view
+    - View : Show information to user
+    - Controller: Controls the flow
+    - Some Advantage are Simpler to maintain.
+    - Disadvante we have security the we need to implement to all the routes
+
+ - Model 2 Architecture - Front Controller
+   - Browser > FrontController > servlet > Model
+                               > View > Model
+
+ - Spring MVC Front Controller - Dispatcher Servlet
+     Request/Response <->           front Controller     <->   Controller
+                                         ^
+                                         |
+                                     View Template
+   
+
+  - Http Process
+    A - Receive HTTP Request
+    B - Process HTTP Request
+       1 - Identify correct controller menthod
+       2 - Execute controller method and return the model and view
+       3 - Identify correct view using view resolver
+       4 - Execute the view
+    C - Return HTTP Response  
 
 
 
