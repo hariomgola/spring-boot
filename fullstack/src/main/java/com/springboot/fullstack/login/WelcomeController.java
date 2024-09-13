@@ -1,6 +1,9 @@
 package com.springboot.fullstack.login;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContext;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,7 +13,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 @Controller
 @SessionAttributes("name")
-public class LoginController {
+public class WelcomeController {
 	/**
 	 * @RequestMapping("login") public String login(@RequestParam String name,
 	 * ModelMap model) { model.put("name", name); return "login"; }
@@ -40,8 +43,13 @@ public class LoginController {
 	 */
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String login(ModelMap model) {
-		model.put("name", "Developer");
+	public String welcomePage(ModelMap model) {
+		model.put("name", getLoggedinUsername());
 		return "welcome";
+	}
+
+	private String getLoggedinUsername() {
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		return authentication.getName();
 	}
 }
