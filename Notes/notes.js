@@ -1,4 +1,11 @@
-/**
+const mainData = {
+  "Introduction to Spring": introductionToSpringLearning,
+  "Introduction to Spring Boot": introductionToSpringBoot,
+  "Introduction to Maven": introductionToMaven,
+  "Build Spring Boot Web Application": buildWebApplication,
+  "Build Spring Boot REST API": restApiSpringBoot,
+};
+const introductionToSpringLearning = () => `
 # Learning Curve 
  - Tight Coupling
  - Loose Coupling
@@ -14,9 +21,8 @@
   - Iteration 2 - Loose coupling interface
   - Iteration 3 - Loose Coupling - Spring framework 1 (Spring bean, framework to manage object and class)
   - Iteration 4 - Loose Coupling - Spring framework 2 (Spring Annotation, spring create manage and autowired objects)
-
--------------------------------------------------------------------------------------------------------------------------
-
+`;
+const introductionToSpringBoot = () => `
 # create a spring project
  - https://start.spring.io/
  - using maven as project and java as language
@@ -94,8 +100,8 @@
 
 # Lazy Initialization of spring Beam
  - @Lazy is used to load the beam when we are using that it will not be directly loaded into the application load
-
--------------------------------------------------------------------------------------------------------------------------
+`;
+const introductionToMaven = () => `
 # Maven (Apache Maven)
  - Apache maven is the project mangment tool that help us to create, build and manage dependencies and test case.
 
@@ -201,9 +207,8 @@
 
 
  - @Entity - IF we want to make the java class same as sql column and rows we need to create this handler
-
-
--------------------------------------------------------------------------------------------------------------------------
+`;
+const buildWebApplication = () => `
 # Build Web Application (Speing Boot,Spring framework and Hibernate)
  - @Controller 
     - We are telling spring that this is the controller class with bean so we have to add the annotation
@@ -274,25 +279,7 @@
     - @SessionAttributes("name") need to be putted when we need to pass the value to the entire session
 
  - Spring form tag libraries - https://docs.spring.io/spring-framework/docs/3.2.x/spring-framework-reference/html/view.html
+`;
+const restApiSpringBoot = () => ``;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- */
+module.exports = mainData;
