@@ -9,6 +9,7 @@
 | spring.boot               | Basic Spring Boot Application                   |
 | spring.boot.hibernate.jpa | Spring Application with JDBC, JPA and Hibernate |
 | fullstack                 | End to End Spring Web Application               |
+| Rest API                  | Rest API Application                            |
 
 ## License
 
