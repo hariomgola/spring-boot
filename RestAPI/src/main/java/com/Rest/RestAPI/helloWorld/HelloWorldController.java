@@ -12,6 +12,7 @@ public class HelloWorldController {
 		return "Hello World";
 	}
 
+	// Here this Handler Returns the JSON
 	@GetMapping(path = "/helloWorldBeans")
 	public HelloWorldBean helloWorldBean() {
 		return new HelloWorldBean("Hello World");

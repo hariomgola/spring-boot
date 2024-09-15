@@ -280,6 +280,35 @@ const buildWebApplication = () => `
 
  - Spring form tag libraries - https://docs.spring.io/spring-framework/docs/3.2.x/spring-framework-reference/html/view.html
 `;
-const restApiSpringBoot = () => ``;
+const restApiSpringBoot = () => `
+# Dependencies Required
+ - Spring Web
+ - Spring Data JPA
+ - H2 Database
+ - Spring Boot DevTools
+
+# Creating the Rest Controller
+ - @RestController - need to be putted outside the class so that its is managed by spring
+ - @RequestMapping(method=RequestMethod.GET,path="/hello-world") // this seems complex and not used much.
+ - @GetMapping(path="/hello-world") Use this alternative it by default handles the get mapping.
+
+# Accessing the path variables
+ - @PathVarible key word is used to access path variable
+ - Code for Accessing the path varaible is mentioned below.
+    ______________________________________________________
+   | @GetMapping(path="user/{name}")                      |
+   | public String aceessUser(@PathVarible String name){  |
+   |   System.out.println(" |> "+name);                   |
+   |   return name;                                       |
+   | }                                                    |
+   |______________________________________________________|
+
+# Different request method
+ - Get - Retrieve details of a resource
+ - Post - Create a new resource
+ - Put - Update an existing resource
+ - Patch - Update part of a resource
+ - Delete - Delate a resource
+`;
 
 module.exports = mainData;
