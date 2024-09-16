@@ -11,24 +11,27 @@ import org.springframework.stereotype.Component;
 public class UserDaoService {
 	// DAO stands for Data Access Object
 	private static List<User> user = new ArrayList<>();
+	private static int userId = 0;
 
 	static {
-		user.add(new User(1, "Hari", LocalDate.now().minusYears(20)));
-		user.add(new User(2, "Aman", LocalDate.now().minusYears(30)));
-		user.add(new User(3, "Kishore", LocalDate.now().minusYears(40)));
+		user.add(new User(++userId, "Hari", LocalDate.now().minusYears(20)));
+		user.add(new User(++userId, "Aman", LocalDate.now().minusYears(30)));
+		user.add(new User(++userId, "Kishore", LocalDate.now().minusYears(40)));
 	}
 
 	public List<User> getAllUser() {
 		return user;
 	}
 
-	public User addUser(User _user) {
-		user.add(_user);
-		return _user;
+	public User addUser(User localuser) {
+		localuser.setId(++userId);
+		user.add(localuser);
+		return localuser;
 	}
 
 	public User findUserById(int id) {
 		Predicate<? super User> predicate = user -> user.getId() == id;
-		return user.stream().filter(predicate).findFirst().get();
+//		return user.stream().filter(predicate).findFirst().get();
+		return user.stream().filter(predicate).findFirst().orElse(null);
 	}
 }

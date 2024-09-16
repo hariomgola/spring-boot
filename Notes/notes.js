@@ -309,6 +309,31 @@ const restApiSpringBoot = () => `
  - Put - Update an existing resource
  - Patch - Update part of a resource
  - Delete - Delate a resource
+
+# Accessing the Request body using @Request Body
+ - Code for Accessing the rquest body is given below
+    ___________________________________________________
+   | @PostMapping(path = "/user")                      |
+	| public void createUser(@RequestBody User user) {  |
+	| 	service.addUser(user);                           |
+	| }                                                 |
+   |___________________________________________________|
+
+# Note
+ - You can use the post man for desktop for api request
+ - You can use the Talent API tester chrome extension for same.
+
+# Correct Response Status
+   200  - Success
+   201  - created
+   204  - No Content
+
+   400  - Bad Request
+   401  - Unauthorized
+   404  - Resource not found
+   
+   500  - Server error
+
 `;
 
 module.exports = mainData;
