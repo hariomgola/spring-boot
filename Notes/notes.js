@@ -331,9 +331,12 @@ const restApiSpringBoot = () => `
    400  - Bad Request
    401  - Unauthorized
    404  - Resource not found
-   
+
    500  - Server error
 
+# Error Handling Class
+ - @ControllerAdvice - Need to be added at class level when we are creating the custom excption class.
+ - @ExceptionHandler(Exception.class) - Need to be 
 `;
 
 module.exports = mainData;
