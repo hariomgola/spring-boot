@@ -346,6 +346,26 @@ const restApiSpringBoot = () => `
 		| 	<artifactId>spring-boot-starter-validation</artifactId>  |
 		| </dependency>                                             |
       |___________________________________________________________|
+
+# Advaced Rest API Features
+ - Documentation (open api / Swagger)
+ - Content Negotiation (xml response)
+ - Internationalization - i8n
+ - Versioning
+ - Hateoas
+ - Static filtering
+ - Dynamic filtering
+ - Monitoring
+
+# Automated Documentation
+  - Url to open the documentation - http://localhost:8080/swagger-ui/index.html
+       __________________________________________________________________
+      | <dependency>                                                     |
+      |	 <groupId>org.springdoc</groupId>                               |
+      |	 <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>   |
+      |	 <version>2.6.0</version>                                       |
+      | </dependency>                                                    |
+      |__________________________________________________________________|
 `;
 
 module.exports = mainData;

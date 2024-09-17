@@ -1,9 +1,9 @@
-package com.Rest.RestAPI.helloWorld;
+package com.Rest.RestAPI.demoApi;
 
-public class HelloWorldBean {
+public class DemoBean {
 	private String message;
 
-	public HelloWorldBean(String message) {
+	public DemoBean(String message) {
 		super();
 		this.message = message;
 	}
