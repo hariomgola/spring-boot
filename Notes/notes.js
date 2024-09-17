@@ -336,7 +336,16 @@ const restApiSpringBoot = () => `
 
 # Error Handling Class
  - @ControllerAdvice - Need to be added at class level when we are creating the custom excption class.
- - @ExceptionHandler(Exception.class) - Need to be 
+ - @ExceptionHandler(Exception.class) - Need to be added to the method for error handling.
+
+# Spring Validation
+ - Need to import validation dependency in pom.xml
+       ___________________________________________________________
+      | <dependency>                                              |
+		| 	<groupId>org.springframework.boot</groupId>              |
+		| 	<artifactId>spring-boot-starter-validation</artifactId>  |
+		| </dependency>                                             |
+      |___________________________________________________________|
 `;
 
 module.exports = mainData;
