@@ -5,6 +5,7 @@
 | Project Schementics       | Description                                     |
 | ------------------------- | ----------------------------------------------- |
 | Notes                     | Notes.js Contains All the notes                 |
+| springbean                | Contains all information about beans            |
 | learn-spring-framework    | Basic Spring Application                        |
 | spring.boot               | Basic Spring Boot Application                   |
 | spring.boot.hibernate.jpa | Spring Application with JDBC, JPA and Hibernate |
