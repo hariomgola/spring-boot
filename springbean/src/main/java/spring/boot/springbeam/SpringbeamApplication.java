@@ -9,7 +9,7 @@ public class SpringbeamApplication {
 	public static void main(String[] args) {
 		// creating the context
 		var context = new AnnotationConfigApplicationContext(Customer.class);
-		System.out.println("*************************************");
+		System.out.println("*** Manually creating and Implementing Bean ***");
 		System.out.println(context.getBean("name"));
 		System.out.println(context.getBean("age"));
 		System.out.println(context.getBean("person"));
