@@ -21,6 +21,7 @@ const springAnnotation = () => `
  - @Component - an annotation that allows Spring to detect our custom beans automatically.
  - @ComponentScan(packagename) - Need to tell spring to scan which package for component.
  - @Autowiring - process of wiring in dependencies for a spring bean.
+ - @Lazy - Class and bean will only be initilized when its used.
 
 # Important Terminology
  - Dependency Injection 
@@ -43,6 +44,84 @@ const springAnnotation = () => `
  - Field Based - @Autowired to used for property.  
 `;
 
+const springBoot = () => `
+# Spring Boot
+ - Spring Boot was introduced in 2016.
+ - Spring Tools for Building Application Quickly
+     Spring Initializr
+     Spring Boot Starter Projects
+     Spring Boot AutoConfiguration
+     Spring Boot DevTools
+ - Spring Tools for Production Ready Application
+     Logging
+     Different configuration for Different Enviourment
+     Monitoring (Spring Boot Actuator)
+
+
+# Spring Boot project Folder structure
+ - src/main/java - where all main code is written
+ - src/main/resouce - resource for project.
+ - src/main/test - unit test cases.
+ - pom.xml - Where all dependecies is placed.
+
+# Application.property 
+ - Configuration using multiple springframework logging level
+      ~ trace
+      ~ debug
+      ~ info
+      ~ warning
+      ~ error
+      ~ off 
+
+# Activate profile for the other Enviourment
+ - spring.profiles.active=prod;
+ - Above thing will take all stuff from application-prod.properties
+
+# Spring Boot Actuator
+ - Actuator help in monitor and manage the application in production enviourment.
+ - beans - Complete list of spring beans in your app
+ - health - Application health information
+ - metris - Application metrics
+ - mappings - Details around request mapping
+`;
+
+const springBootDependency = () => `
+# Deploy and develop application using JAR
+ - Click on project and run as maven build
+ - Goal write command as  [clean install]
+ - Then go to the jar file run using java --jar [filename] 
+ - Deployed using embedded server
+      - tomcat
+      - jetty
+      - undertow
+
+# Lambok
+  <dependency>
+		<groupId>org.projectlombok</groupId>
+		<artifactId>lombok</artifactId>
+		<version>1.16.18</version>
+	</dependency>
+
+# Spring DevTools
+  <dependency>
+    <groupId>org.springframework.boot</groupId>
+	  <artifactId>spring-boot-devtools</artifactId>
+	</dependency>  
+
+# Spring Actuator
+  <dependency>
+    <groupId>org.springframework.boot</groupId>
+	  <artifactId>spring-boot-starter-actuator</artifactId>
+	</dependency>  
+  - if want to get all end point put this in properties
+  management.endpoints.web.exposure.include=*
+`;
+
+const springJpa = () => ``;
+
 const exportData = {
   "Spring Annotation": springAnnotation,
+  "Spring Boot": springBoot,
+  "Sprig Boot Dependency": springBootDependency,
+  "Spring JPA and Hibernate": springJpa,
 };
