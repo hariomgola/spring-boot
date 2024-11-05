@@ -117,7 +117,12 @@ const springBootDependency = () => `
   management.endpoints.web.exposure.include=*
 `;
 
-const springJpa = () => ``;
+const springJpa = () => `
+# Create the table using below functionality
+ - Spring JDBC
+ - JPA and Hibernate
+ - Spring Data JPA
+`;
 
 const exportData = {
   "Spring Annotation": springAnnotation,
