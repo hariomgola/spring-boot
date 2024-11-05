@@ -1,13 +1,13 @@
-package com.spring.boot.learn.sprint.boot;
+package springboot.springbootdb;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Application {
+public class SpringbootdbApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
+		SpringApplication.run(SpringbootdbApplication.class, args);
 	}
 
 }

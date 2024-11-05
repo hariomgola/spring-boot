@@ -1,10 +1,10 @@
-package com.spring.boot.learn.sprint.boot;
+package springboot.springbootdb;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ApplicationTests {
+class SpringbootdbApplicationTests {
 
 	@Test
 	void contextLoads() {
