@@ -137,7 +137,36 @@ const springJpa = () => `
  - Using Hibernate directly would result in a lock in to Hibernate
 `;
 
-const springRestApi = () => ``;
+const springRestApi = () => `
+# Rest API
+ - @RequestMapping(method = RequestMethod.GET, path = "/string")
+     - @GetMapping("/")
+	   - @PutMapping("/")
+	   - @PostMapping("/")
+	   - @DeleteMapping("/")
+
+# Auto configuration
+ - To Return the JSON Response spring use - @ResponseBody + JacksonHttpMessageConverters
+ - ErrorMVCAutoConfiguration for white label page
+
+# Path Parameters
+  @GetMapping("/path-variable/{name}")
+  public String pathVaribleDataReturn(@PathVariable String name) {
+  	return String.format("Hello Data - %s", name.toUpperCase());
+  }
+
+# End point over view
+  emp {
+   id:1,
+   name:"Hari",
+   designation:"Developer"
+  }
+ - Get - To reterieve all data
+ - Post - Create a new Resource
+ - Put - Update an Existing resource more than one like id,name combine.
+ - Patch - Update part of resource like only id or only name.
+ - Delete - Delete a resource.
+`;
 
 const exportData = {
   "Spring Annotation": springAnnotation,
