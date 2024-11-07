@@ -1,4 +1,4 @@
-package springJPA;
+package springboot.springbootdb.springJPA;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

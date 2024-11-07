@@ -8,7 +8,8 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 //@ComponentScan("springJdbc")
 //@ComponentScan("springJPA")
-@ComponentScan("springDataJPA")
+//@ComponentScan("springDataJPA")
+// Remember to put the JPA inside the original package to get it working
 public class SpringbootdbApplication {
 
 	public static void main(String[] args) {
