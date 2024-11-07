@@ -115,6 +115,12 @@ const springBootDependency = () => `
 	</dependency>  
   - if want to get all end point put this in properties
   management.endpoints.web.exposure.include=*
+
+# Started Validation
+  <dependency>
+    <groupId>org.springframework.boot</groupId>
+	  <artifactId>spring-boot-validation</artifactId>
+	</dependency>  
 `;
 
 const springJpa = () => `
@@ -166,6 +172,15 @@ const springRestApi = () => `
  - Put - Update an Existing resource more than one like id,name combine.
  - Patch - Update part of resource like only id or only name.
  - Delete - Delete a resource.
+
+# Status Code for mapping
+ - 200 - success
+ - 201 - created
+ - 204 - No Content
+ - 401 - Unauthorizes
+ - 400 - Bad Request
+ - 404 - Resource not found
+ - 500 - Internal Server Error
 `;
 
 const exportData = {

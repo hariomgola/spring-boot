@@ -6,6 +6,8 @@ import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 @ComponentScan("LogicController")
+@ComponentScan("user")
+@ComponentScan("exception")
 public class SpringbootRestApiApplication {
 
 	public static void main(String[] args) {
