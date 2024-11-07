@@ -121,6 +121,13 @@ const springBootDependency = () => `
     <groupId>org.springframework.boot</groupId>
 	  <artifactId>spring-boot-validation</artifactId>
 	</dependency>  
+
+# Open API Documentation
+  <dependency>
+	  <groupId>org.springdoc</groupId>
+	  <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+	<version>2.6.0</version>
+</dependency>
 `;
 
 const springJpa = () => `
@@ -181,6 +188,31 @@ const springRestApi = () => `
  - 400 - Bad Request
  - 404 - Resource not found
  - 500 - Internal Server Error
+
+# @ControllerAdvice - It is used in the class of exception handling
+
+# Advance Rest API features
+ - Documentation - openAPi and swagger
+ - Content Negotiation - JSON and XML
+ - Internationalization - i18n
+ - Versioning
+
+# Documentation
+ - Swagger(2011) and open api(2016) is the famous tools for documentation API
+ - To check swagger documentation go to - http://localhost:8080/swagger-ui.html
+
+# Content Negociation
+ - Simply import the dependency spring will take care of all stuff
+  <dependency>
+    <groupId>com.fasterxml.jackson.dataformat</groupId>
+    <artifactId>jackson-dataformat-xml</artifactId>
+  </dependency>
+  - By deafult the data with be written in json
+  - If want the xml pass the Accept as application/xml in header
+
+# Intenationalization i18n
+ - Application should be used around the world so make it into different language we use same.
+ - Accept-Language in http Request Header (en, nl, fr)
 `;
 
 const exportData = {
