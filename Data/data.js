@@ -42,6 +42,19 @@ const springAnnotation = () => `
  - Constructor Based - @Autowired is used at constructor. // This one is automatic @autowired is not needed
  - Setter Based - @Autowired is used at setter function.
  - Field Based - @Autowired to used for property.  
+
+# Data Annotation   -  SpringJDBC > JPA > SpringDataJPA
+ @Repository - repository need to be putted in class which is communicating to the DB.
+ @PersistenceContext - Its same like @autowired but more specific to jpa
+ @Transactional - Where ever we are using the Entity manager we have to use the traction in repository.
+
+ - To get all command which is executed in JPA - spring.jpa.show-sql=true
+
+# Difference B/w Hibernate and JPA
+ - JPA Defines the specification. Its an Api.
+ - Jpa defined entities, Attributes and entities.
+ - [Hibernate] is one of the popular implementation of JPA
+ - Using Hibernate directly would result in a lock in to Hibernate
 `;
 
 const springBoot = () => `
