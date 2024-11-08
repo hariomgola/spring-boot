@@ -119,15 +119,29 @@ const springBootDependency = () => `
 # Started Validation
   <dependency>
     <groupId>org.springframework.boot</groupId>
-	  <artifactId>spring-boot-validation</artifactId>
+	  <artifactId>spring-boot-starter-validation</artifactId>
 	</dependency>  
 
 # Open API Documentation
   <dependency>
 	  <groupId>org.springdoc</groupId>
 	  <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-	<version>2.6.0</version>
-</dependency>
+	  <version>2.6.0</version>
+  </dependency>
+
+# HATEOAS
+  <dependency>
+    <groupId>org.springframework.boot</groupId>
+	  <artifactId>spring-boot-starter-hateoas</artifactId>
+	</dependency>  
+
+# Halexplorer
+  <dependency>
+    <groupId>org.springframework.boot</groupId>
+	  <artifactId>spring-data-rest-hal-explorer</artifactId>
+	</dependency>  
+
+  - end pint - /explorer
 `;
 
 const springJpa = () => `
@@ -213,6 +227,53 @@ const springRestApi = () => `
 # Intenationalization i18n
  - Application should be used around the world so make it into different language we use same.
  - Accept-Language in http Request Header (en, nl, fr)
+
+# Versioning
+ - Version a rest api like localhost:8080/v1/users or localhost:8080/v2/users
+ - URL versioning
+     http://localhost:8080/v1/person
+     http://localhost:8080/v2/person
+ - Request Parameter verioning - Amazon
+     http://localhost:8080/person?version=1
+     http://localhost:8080/person?version=2
+ - Custom Header versioning - Microsoft
+     Same-url headers = [X-API-Version=1]
+     Same-url headers = [X-API-Version=2]
+ - Media type versioning ("content negotiation" or "accept header") - Github
+     Same-url produces=application/vnd.company.app-v1+json
+     Same-url produces=application/vnd.company.app-v2+json
+
+# HATEOAS
+ - Hypermedia as the Engine of Application State (HATEOAS)
+
+# Serialization 
+ - Convert object to streams
+ - Most popular JSON serialization in java is JACKSON
+ - When we want to customize any return end point we will define below line
+ @JsonProperty("user_name")
+ - We can also return the selected field
+ - Two type of filter
+    - Static Filter - same filtering for a bean across different REST API
+           - @JsonIgnoreProperties, @JsonIgnore
+    - Dynamic Filter - Customize filtering for a bean for specific REST API
+           - @JsonFilter with FilterProvider
+
+ - Is want to ignore the the property define @JsonIgnore at property 
+ - Or can be done at class level @JsonIgnorePeroperties("field1")
+
+# Code for Dynamic Filter
+  @GetMapping("/filtering-dynamic")
+	public MappingJacksonValue filteringDynamic() {
+		Some_Bean some_bean = new Some_Bean("value 1", "value 2", "value 3");
+		MappingJacksonValue mappingJacksonValue = new MappingJacksonValue(some_bean);
+		SimpleBeanPropertyFilter filter = SimpleBeanPropertyFilter.filterOutAllExcept("field1");
+		FilterProvider filters = new SimpleFilterProvider().addFilter("SomeBeanFilter", filter);
+		mappingJacksonValue.setFilters(filters);
+		return mappingJacksonValue;
+		// return new Some_Bean("value 1", "value 2", "value 3");
+	}
+
+  class Level this need to be put for some_bean - @JsonFilter(value = "SomeBeanFilter")
 `;
 
 const exportData = {

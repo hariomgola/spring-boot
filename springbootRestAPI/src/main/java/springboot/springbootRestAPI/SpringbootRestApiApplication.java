@@ -8,6 +8,8 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan("LogicController")
 @ComponentScan("user")
 @ComponentScan("exception")
+@ComponentScan("versioning")
+@ComponentScan("filtering")
 public class SpringbootRestApiApplication {
 
 	public static void main(String[] args) {
