@@ -9,6 +9,7 @@ public class DefaultController {
 	public DefaultPageResponse defaultHandler() {
 		String defaultConfigString = "Hi This is Landing page of the application";
 		String defaulth2ConfigString = "H2 URL : http://localhost:8080/h2-console";
-		return new DefaultPageResponse(defaultConfigString, defaulth2ConfigString);
+		String defaultPostManString = "PostMan : Using the talent Api tester from Chrome store";
+		return new DefaultPageResponse(defaultConfigString, defaulth2ConfigString, defaultPostManString);
 	}
 }

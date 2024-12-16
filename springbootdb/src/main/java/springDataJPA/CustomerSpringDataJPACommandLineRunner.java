@@ -15,7 +15,7 @@ public class CustomerSpringDataJPACommandLineRunner implements CommandLineRunner
 		repository.save(new Customer(6, "Kali", "username_kali", "email_kali"));
 		repository.deleteById(5);
 		System.out.println("\n\n\n>> " + repository.findById(1));
-
+		
 	}
 
 }

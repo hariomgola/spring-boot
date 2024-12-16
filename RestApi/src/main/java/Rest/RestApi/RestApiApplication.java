@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan("Default")
+@ComponentScan({ "Default", "Employee" })
 public class RestApiApplication {
 
 	public static void main(String[] args) {
