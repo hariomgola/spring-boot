@@ -50,4 +50,24 @@ VALUES
 (19, 'Ankita', 'Yadav', 27, 'ankita_y', 'ankita.y@example.com', 'Indore, MG Road'),
 (20, 'Pooja', 'Sharma', 32, 'pooja_s', 'pooja.s@example.com', 'Jaipur, Malviya Nagar');
 
+-- Student table and all student data
+CREATE TABLE Student (
+    id INT NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    message VARCHAR(255) NOT NULL,
+    address VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id)
+);
 
+INSERT INTO Student (id, name, message, address) 
+VALUES
+(1, 'John Doe', 'Welcome to the class!', '123 Elm St, Springfield'),
+(2, 'Jane Smith', 'Looking forward to learning.', '456 Oak St, Rivertown'),
+(3, 'Emily Johnson', 'Excited for this semester!', '789 Pine St, Lakeside'),
+(4, 'Michael Brown', 'Ready to start the journey.', '101 Maple St, Greenfield'),
+(5, 'Sarah Lee', 'Let’s do our best!', '202 Birch St, Hilltop'),
+(6, 'David White', 'Happy to be here!', '303 Cedar St, Mountainview'),
+(7, 'Rachel Williams', 'Eager to learn more.', '404 Spruce St, Valleyview'),
+(8, 'Chris Davis', 'Hoping for a great experience.', '505 Redwood St, Forestville'),
+(9, 'Matthew Miller', 'Let’s achieve great things!', '606 Sequoia St, Seaview'),
+(10, 'Olivia Taylor', 'Excited for the challenges ahead.', '707 Fir St, Brooktown');
