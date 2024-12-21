@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import Post.Post;
+
 @RestController
 @RequestMapping("/student")
 public class StudentController {
@@ -55,4 +57,5 @@ public class StudentController {
 		response.put("statusCode", 200);
 		return response;
 	}
+
 }

@@ -7,9 +7,9 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
-@EnableJpaRepositories(basePackages = { "Employee", "Student" })
-@EntityScan(basePackages = { "Employee", "Student" })
-@ComponentScan({ "Default", "Employee", "Student" })
+@EnableJpaRepositories(basePackages = { "Employee", "Student", "Post" })
+@EntityScan(basePackages = { "Employee", "Student", "Post" })
+@ComponentScan({ "Default", "Employee", "Student", "Post" })
 public class RestApiApplication {
 
 	public static void main(String[] args) {
