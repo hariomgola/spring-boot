@@ -14,6 +14,8 @@
 |                     | CommandLineRunner - Execution of Code(Not Required) |
 | springboot UI       | Application returning UI at endpoint                |
 | Springboot restApi  | End to End Rest API using Spring Boot               |
+|                     | User and Address separate Entity                    |
+| RestApi             | Enterprise level rest API With database connection  |
 
 ## License
 
