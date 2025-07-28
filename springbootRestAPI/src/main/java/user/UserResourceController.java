@@ -17,10 +17,10 @@ import exception.UserNotFoundException;
 import jakarta.validation.Valid;
 
 @RestController
-public class UserResource {
+public class UserResourceController {
 	private UserDaoService service;
 
-	public UserResource(UserDaoService service) {
+	public UserResourceController(UserDaoService service) {
 		this.service = service;
 	}
 
