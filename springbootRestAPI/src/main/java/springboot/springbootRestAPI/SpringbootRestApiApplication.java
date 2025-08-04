@@ -10,6 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan("exception")
 @ComponentScan("versioning")
 @ComponentScan("filtering")
+@ComponentScan("LearningLogic")
 public class SpringbootRestApiApplication {
 
 	public static void main(String[] args) {
