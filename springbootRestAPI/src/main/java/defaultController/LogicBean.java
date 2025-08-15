@@ -1,4 +1,4 @@
-package LogicController;
+package defaultController;
 
 public class LogicBean {
 	private String message;

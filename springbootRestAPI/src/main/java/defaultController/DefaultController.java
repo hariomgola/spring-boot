@@ -1,4 +1,4 @@
-package LogicController;
+package defaultController;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,12 +10,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class LogicController {
+public class DefaultController {
 	@GetMapping("/")
 	@PutMapping("/")
 	@PostMapping("/")
 	@DeleteMapping("/")
 	public String DefaultMapping() {
+		System.out.println("|> - Calling the Default controller");
 		return """
 				Hi! This Application is created by Hari
 				With the help of all Logic of Spring boot
