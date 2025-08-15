@@ -13,6 +13,7 @@ public class MyInterceptor implements HandlerInterceptor {
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
 			throws Exception {
 		System.out.println("*****       -> Entering the pre Handler <-        *****");
+		// System.out.println("Intercepting URI: " + request.getRequestURI());
 		boolean authernticationData = false;
 		if (authernticationData) {
 			response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
