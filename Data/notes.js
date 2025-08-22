@@ -4,6 +4,7 @@ const mainData = {
   "Introduction to Maven": introductionToMaven,
   "Build Spring Boot Web Application": buildWebApplication,
   "Build Spring Boot REST API": restApiSpringBoot,
+  "Introduction to Spring API": introductionToSpringAop,
 };
 const introductionToSpringLearning = () => `
 # Learning Curve 
@@ -367,5 +368,7 @@ const restApiSpringBoot = () => `
       | </dependency>                                                    |
       |__________________________________________________________________|
 `;
+
+const introductionToSpringAop = () => ``;
 
 module.exports = mainData;
