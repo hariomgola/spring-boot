@@ -1,5 +1,8 @@
 package defaultController;
 
+import java.util.HashMap;
+
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -15,12 +18,12 @@ public class DefaultController {
 	@PutMapping("/")
 	@PostMapping("/")
 	@DeleteMapping("/")
-	public String DefaultMapping() {
+	public ResponseEntity<Object> DefaultMapping() {
 		System.out.println("|> - Calling the Default controller");
-		return """
-				Hi! This Application is created by Hari
-				With the help of all Logic of Spring boot
-				""";
+		HashMap<String, String> _hs = new HashMap<String, String>();
+		_hs.put("Owner", "Hi! Hari This Side");
+//		_hs.put(null, null);
+		return ResponseEntity.ok(_hs);
 	}
 
 	@RequestMapping(method = RequestMethod.GET, path = "/string")
